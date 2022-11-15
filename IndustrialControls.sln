@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndustrialControls.Demo", "IndustrialControls.Demo\IndustrialControls.Demo.csproj", "{D6E044DC-447F-4729-AEBF-157040528D02}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IndustrialControls", "IndustrialControls\IndustrialControls.csproj", "{C2B51525-6829-4640-8BBE-93BE3FBCE531}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2B51525-6829-4640-8BBE-93BE3FBCE531}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2B51525-6829-4640-8BBE-93BE3FBCE531}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2B51525-6829-4640-8BBE-93BE3FBCE531}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2B51525-6829-4640-8BBE-93BE3FBCE531}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6E044DC-447F-4729-AEBF-157040528D02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6E044DC-447F-4729-AEBF-157040528D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6E044DC-447F-4729-AEBF-157040528D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6E044DC-447F-4729-AEBF-157040528D02}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F74D9442-ABC2-4B90-818E-9BAB601F1F4D}
+	EndGlobalSection
+EndGlobal
