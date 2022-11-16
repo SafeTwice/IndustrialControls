@@ -1,0 +1,41 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <DrawingImage x:Key="OnOffRedDrawingImage">
+        <!-- Based on https://publicdomainvectors.org/en/free-clipart/Red-power-button-drawing/8139.html -->
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V44.454296 H44.121254 V0 H0 Z">
+                <DrawingGroup Opacity="1" Transform="1,0,0,1,-38.250323,-28.687441">
+                    <DrawingGroup Transform="0.62849,0,0,0.62849,-351.35,-520.1">
+                        <GeometryDrawing Brush="Red" Geometry="F0 M44.121254,44.454296z M0,0z M690.1,908.55A35.101,35.101,0,1,1,619.9,908.55A35.101,35.101,0,1,1,690.1,908.55z" />
+                    </DrawingGroup>
+                    <DrawingGroup Opacity="1" Transform="0.58241,0,0,0.62445,-298.36,-439.03">
+                        <DrawingGroup Transform="0.93548,0,0,0.93548,3.1009,-64.472">
+                            <GeometryDrawing Brush="#FF901414" Geometry="F0 M44.121254,44.454296z M0,0z M649.09,892C641.48,894.49 635.94,901.61 635.94,910.06 635.94,920.59 644.48,929.12 655,929.12 665.52,929.12 674.06,920.59 674.06,910.06 674.06,901.6 668.5,894.49 660.88,892L660.88,898.81C664.94,900.95 667.78,905.15 667.78,910.06 667.78,917.11 662.05,922.84 655,922.84 647.95,922.84 642.22,917.11 642.22,910.06 642.22,905.16 645.03,900.95 649.09,898.81z" />
+                        </DrawingGroup>
+                        <DrawingGroup Transform="0.93548,0,0,0.93548,3.1009,-64.472">
+                            <GeometryDrawing Brush="#FF901414" Geometry="F0 M44.121254,44.454296z M0,0z M651.78,887.91L651.78,910.53 658.22,910.53 658.22,887.91z" />
+                        </DrawingGroup>
+                    </DrawingGroup>
+                    <DrawingGroup Opacity="1" Transform="0.58241,0,0,0.58241,-298.36,-406.82">
+                        <DrawingGroup Transform="0.93548,0,0,0.93548,3.1009,-64.472">
+                            <GeometryDrawing Brush="#FFEEEEEC" Geometry="F0 M44.121254,44.454296z M0,0z M649.09,892C641.48,894.49 635.94,901.61 635.94,910.06 635.94,920.59 644.48,929.12 655,929.12 665.52,929.12 674.06,920.59 674.06,910.06 674.06,901.6 668.5,894.49 660.88,892L660.88,898.81C664.94,900.95 667.78,905.15 667.78,910.06 667.78,917.11 662.05,922.84 655,922.84 647.95,922.84 642.22,917.11 642.22,910.06 642.22,905.16 645.03,900.95 649.09,898.81z" />
+                        </DrawingGroup>
+                        <DrawingGroup Transform="0.93548,0,0,0.93548,3.1009,-64.472">
+                            <GeometryDrawing Brush="#FFEEEEEC" Geometry="F0 M44.121254,44.454296z M0,0z M651.78,887.91L651.78,910.53 658.22,910.53 658.22,887.91z" />
+                        </DrawingGroup>
+                    </DrawingGroup>
+                    <DrawingGroup Transform="0.70156,0,0,0.73625,-28.922,17.305">
+                        <GeometryDrawing Geometry="F0 M44.121254,44.454296z M0,0z M149.63,34.779A22.43,16.284726,0,1,1,104.77,34.779A22.43,16.284726,0,1,1,149.63,34.779z">
+                            <GeometryDrawing.Brush>
+                                <LinearGradientBrush StartPoint="127.2,18.495001" EndPoint="127.2,47.547001" MappingMode="Absolute" SpreadMethod="Pad" Opacity="0.75">
+                                    <GradientStop Color="#FFFFFFFF" Offset="0" />
+                                    <GradientStop Color="#00FFFFFF" Offset="1" />
+                                </LinearGradientBrush>
+                            </GeometryDrawing.Brush>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+</ResourceDictionary>

@@ -7,25 +7,60 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <DockPanel Grid.Column="0" Margin="20,10" VerticalAlignment="Center">
-            <Label DockPanel.Dock="Bottom" Content="Copycat 🡲" HorizontalAlignment="Center"/>
-            <ic:LedIndicator IsChecked="{Binding ElementName=Main, Path=IsChecked}"
-                             IsEnabled="{Binding ElementName=Main, Path=IsEnabled}"
-                             UncheckedBrush="Red" UncheckedHighlight="1.0"/>
-        </DockPanel>
-        <DockPanel Grid.Column="1" Margin="20,10" VerticalAlignment="Center">
-            <Label DockPanel.Dock="Bottom" Content="🡱&#xA;Click me!" HorizontalAlignment="Center" TextBlock.TextAlignment="Center"/>
-            <ic:LedIndicator Name="Main" IsEnabled="{Binding ElementName=Enable, Path=IsChecked}"
-                             IsReadOnly="False" CheckedBrush="Blue"/>
-        </DockPanel>
-        <DockPanel Grid.Column="2" Margin="20,10" VerticalAlignment="Center">
-            <Label DockPanel.Dock="Bottom" Content="🡰 Enable left control" HorizontalAlignment="Center"/>
-            <ic:LedIndicator Name="Enable" IsReadOnly="False" IsChecked="True"/>
-        </DockPanel>
+        <TabControl>
+            <TabItem Header="LedIndicator">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <DockPanel Grid.Column="0" Margin="20,10" VerticalAlignment="Center">
+                        <Label DockPanel.Dock="Bottom" Content="Copycat 🡲" HorizontalAlignment="Center"/>
+                        <ic:LedIndicator IsChecked="{Binding ElementName=LedIndicator_Main, Path=IsChecked}"
+                                         IsEnabled="{Binding ElementName=LedIndicator_Main, Path=IsEnabled}"
+                                         UncheckedBrush="Red" UncheckedHighlight="1.0"/>
+                    </DockPanel>
+                    <DockPanel Grid.Column="1" Margin="20,10" VerticalAlignment="Center">
+                        <Label DockPanel.Dock="Bottom" Content="🡱&#xA;Click me!" HorizontalAlignment="Center" TextBlock.TextAlignment="Center"/>
+                        <ic:LedIndicator Name="LedIndicator_Main" IsEnabled="{Binding ElementName=LedIndicator_Enable, Path=IsChecked}"
+                                         IsReadOnly="False" CheckedBrush="Blue"/>
+                    </DockPanel>
+                    <DockPanel Grid.Column="2" Margin="20,10" VerticalAlignment="Center">
+                        <Label DockPanel.Dock="Bottom" Content="🡰 Enable left control" HorizontalAlignment="Center"/>
+                        <ic:LedIndicator Name="LedIndicator_Enable" IsReadOnly="False" IsChecked="True"/>
+                    </DockPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Header="ImageCheckBox">
+                <Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <DockPanel Grid.Column="0" Margin="5" VerticalAlignment="Center">
+                            <Label DockPanel.Dock="Bottom" Content="Copycat 🡲" HorizontalAlignment="Center"/>
+                            <ic:ImageCheckBox IsReadOnly="True"
+                                              IsChecked="{Binding ElementName=ImageCheckBox_Main, Path=IsChecked}"
+                                              IsEnabled="{Binding ElementName=ImageCheckBox_Main, Path=IsEnabled}"
+                                              CheckedImageSource="{StaticResource OnOffGreenDrawingImage}"
+                                              UncheckedImageSource="{StaticResource OnOffRedDrawingImage}"
+                                              DisabledImageSource="{StaticResource OnOffGrayDrawingImage}"/>
+                        </DockPanel>
+                        <DockPanel Grid.Column="1" Margin="5" VerticalAlignment="Center">
+                            <Label DockPanel.Dock="Bottom" Content="🡱&#xA;Click me!" TextBlock.TextAlignment="Center" HorizontalAlignment="Center"/>
+                            <ic:ImageCheckBox x:Name="ImageCheckBox_Main" IsReadOnly="False"
+                                              IsEnabled="{Binding ElementName=ImageCheckBox_Enable, Path=IsChecked}"/>
+                        </DockPanel>
+                        <DockPanel Grid.Column="2" Margin="5" VerticalAlignment="Center">
+                            <Label DockPanel.Dock="Bottom" Content="🡰 Enable left control&#xA;" HorizontalAlignment="Center"/>
+                            <ic:ImageCheckBox x:Name="ImageCheckBox_Enable" IsReadOnly="False" IsChecked="True"/>
+                        </DockPanel>
+                    </Grid>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

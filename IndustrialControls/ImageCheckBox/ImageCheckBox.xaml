@@ -1,0 +1,40 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:IndustrialControls">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/IndustrialControls;component/ImageCheckBox/DefaultCheckedImage.xaml"/>
+        <ResourceDictionary Source="/IndustrialControls;component/ImageCheckBox/DefaultUncheckedImage.xaml"/>
+        <ResourceDictionary Source="/IndustrialControls;component/ImageCheckBox/DefaultDisabledImage.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    <Style TargetType="{x:Type local:ImageCheckBox}">
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="CheckedImageSource" Value="{StaticResource ImageCheckBox_DefaultCheckedDrawingImage}"/>
+        <Setter Property="UncheckedImageSource" Value="{StaticResource ImageCheckBox_DefaultUncheckedDrawingImage}"/>
+        <Setter Property="DisabledImageSource" Value="{StaticResource ImageCheckBox_DefaultDisabledDrawingImage}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:ImageCheckBox">
+                    <Grid Margin="{TemplateBinding Padding}">
+                        <Image Name="Image" Stretch="{TemplateBinding ImageStretch}"/>
+                        <ContentPresenter VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          RecognizesAccessKey="True"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="Image" Property="Source" Value="{Binding Path=CheckedImageSource, RelativeSource={RelativeSource TemplatedParent}}"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="false">
+                            <Setter TargetName="Image" Property="Source" Value="{Binding Path=UncheckedImageSource, RelativeSource={RelativeSource TemplatedParent}}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter TargetName="Image" Property="Source" Value="{Binding Path=DisabledImageSource, RelativeSource={RelativeSource TemplatedParent}}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

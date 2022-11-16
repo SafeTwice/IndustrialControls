@@ -4,5 +4,12 @@
              xmlns:local="clr-namespace:LedControl.Demo"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Images/OnOffGreen.xaml"/>
+                <ResourceDictionary Source="/Images/OnOffRed.xaml"/>
+                <ResourceDictionary Source="/Images/OnOffGray.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
