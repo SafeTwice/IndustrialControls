@@ -58,6 +58,7 @@
                             <Setter TargetName="LowGlow" Property="Visibility" Value="Hidden"/>
                             <Setter TargetName="HighGlow" Property="Visibility" Value="Hidden"/>
                             <Setter TargetName="Background" Property="Fill" Value="{Binding Path=DisabledBrush, RelativeSource={RelativeSource TemplatedParent}}"/>
+                            <Setter TargetName="Border" Property="Opacity" Value="0.3"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

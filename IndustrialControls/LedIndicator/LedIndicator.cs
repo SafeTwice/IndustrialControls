@@ -30,7 +30,7 @@ namespace IndustrialControls
 
         public static readonly DependencyProperty DisabledBrushProperty =
             DependencyProperty.Register( nameof( DisabledBrush ), typeof( Brush ), typeof( LedIndicator ),
-                new FrameworkPropertyMetadata( Brushes.Gray, FrameworkPropertyMetadataOptions.AffectsRender ) );
+                new FrameworkPropertyMetadata( Brushes.LightGray, FrameworkPropertyMetadataOptions.AffectsRender ) );
 
         public Brush DisabledBrush
         {
@@ -93,7 +93,7 @@ namespace IndustrialControls
 
         private static object CoerceIsHitTestVisibleAndFocusable( DependencyObject d, object baseValue )
         {
-            var ledControl = ( LedIndicator ) d;
+            var ledControl = (LedIndicator) d;
             return ledControl.IsReadOnly ? false : baseValue;
         }
     }
